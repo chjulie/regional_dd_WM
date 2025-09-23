@@ -1,0 +1,10 @@
+#!/bin/sh -l
+
+#SBATCH --nodes=1
+#SBATCH --gpus=h100:1
+#SBATCH --cpus-per-task=12
+#SBATCH --time=1:00:00
+#SBATCH --output=./inference_aifs_single-v1.txt
+
+source ../.venv/bin/activate
+uv run inference_aifs_single-v1.py
