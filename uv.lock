@@ -101,6 +101,20 @@ wheels = [
 ]
 
 [[package]]
+name = "anemoi-registry"
+version = "0.1.8"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "anemoi-datasets" },
+    { name = "jsonpatch" },
+    { name = "requests" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/97/25/54831f141d3d5b0119b5b9dbb2cd71ec2c4e5fbb207437fd82531174ace2/anemoi_registry-0.1.8.tar.gz", hash = "sha256:4a0e5265ba50fa6a83fa2a74290b00904ec15d000e52783a436734164607c526", size = 119856, upload-time = "2025-03-04T08:40:14.166Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d7/95/6e1c7917cd2e47f89a94c73db782c53b6b6ee55c0f850f3730192266af6f/anemoi_registry-0.1.8-py3-none-any.whl", hash = "sha256:eef682d7a6932acaddcc0d4b06bae7f84b56e525469bf5a9ae6d2268e5bd729f", size = 54251, upload-time = "2025-03-04T08:40:12.561Z" },
+]
+
+[[package]]
 name = "anemoi-transform"
 version = "0.1.16"
 source = { registry = "https://pypi.org/simple" }
@@ -1375,12 +1389,33 @@ wheels = [
 ]
 
 [[package]]
+name = "jsonpatch"
+version = "1.33"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "jsonpointer" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/42/78/18813351fe5d63acad16aec57f94ec2b70a09e53ca98145589e185423873/jsonpatch-1.33.tar.gz", hash = "sha256:9fcd4009c41e6d12348b4a0ff2563ba56a2923a7dfee731d004e212e1ee5030c", size = 21699, upload-time = "2023-06-26T12:07:29.144Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/73/07/02e16ed01e04a374e644b575638ec7987ae846d25ad97bcc9945a3ee4b0e/jsonpatch-1.33-py2.py3-none-any.whl", hash = "sha256:0ae28c0cd062bbd8b8ecc26d7d164fbbea9652a1a3693f3b956c1eae5145dade", size = 12898, upload-time = "2023-06-16T21:01:28.466Z" },
+]
+
+[[package]]
 name = "jsonpickle"
 version = "4.1.1"
 source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/e4/a6/d07afcfdef402900229bcca795f80506b207af13a838d4d99ad45abf530c/jsonpickle-4.1.1.tar.gz", hash = "sha256:f86e18f13e2b96c1c1eede0b7b90095bbb61d99fedc14813c44dc2f361dbbae1", size = 316885, upload-time = "2025-06-02T20:36:11.57Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/c1/73/04df8a6fa66d43a9fd45c30f283cc4afff17da671886e451d52af60bdc7e/jsonpickle-4.1.1-py3-none-any.whl", hash = "sha256:bb141da6057898aa2438ff268362b126826c812a1721e31cf08a6e142910dc91", size = 47125, upload-time = "2025-06-02T20:36:08.647Z" },
+]
+
+[[package]]
+name = "jsonpointer"
+version = "3.0.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/6a/0a/eebeb1fa92507ea94016a2a790b93c2ae41a7e18778f85471dc54475ed25/jsonpointer-3.0.0.tar.gz", hash = "sha256:2b2d729f2091522d61c3b31f82e11870f60b68f43fbc705cb76bf4b832af59ef", size = 9114, upload-time = "2024-06-10T19:24:42.462Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/71/92/5e77f98553e9e75130c78900d000368476aed74276eb8ae8796f65f00918/jsonpointer-3.0.0-py2.py3-none-any.whl", hash = "sha256:13e088adc14fca8b6aa8177c044e12701e6ad4b28ff10e65f2267a90109c9942", size = 7595, upload-time = "2024-06-10T19:24:40.698Z" },
 ]
 
 [[package]]
@@ -2496,6 +2531,7 @@ dependencies = [
     { name = "anemoi-graphs" },
     { name = "anemoi-inference", extra = ["huggingface"] },
     { name = "anemoi-models" },
+    { name = "anemoi-registry" },
     { name = "anemoi-transform" },
     { name = "boto3" },
     { name = "earthkit" },
@@ -2515,6 +2551,7 @@ requires-dist = [
     { name = "anemoi-graphs", specifier = "==0.3.0" },
     { name = "anemoi-inference", extras = ["huggingface"], specifier = "==0.4.9" },
     { name = "anemoi-models", specifier = "==0.3.1" },
+    { name = "anemoi-registry", specifier = ">=0.1.8" },
     { name = "anemoi-transform", specifier = "==0.1.16" },
     { name = "boto3", specifier = "==1.40.32" },
     { name = "earthkit", specifier = "==0.12.0" },
