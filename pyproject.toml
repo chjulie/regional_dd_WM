@@ -24,7 +24,13 @@ dependencies = [
     "anemoi-registry>=0.1.8",
     "cartopy>=0.25.0",
     "pip>=25.2",
+    "filetype>=1.2.0",
 ]
 
 [tool.uv.extra-build-dependencies]
 flash-attn = ["setuptools", "torch"]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.30.1",
+]

@@ -1,4 +1,5 @@
 .python-version
 *.txt
 
+data/
 figures/
