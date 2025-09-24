@@ -1,4 +1,5 @@
 import datetime
+import os
 import numpy as np
 import torch
 from collections import defaultdict
@@ -6,10 +7,14 @@ from collections import defaultdict
 import earthkit.data as ekd
 import earthkit.regrid as ekr
 
+import matplotlib.pyplot as plt
+import cartopy.crs as ccrs
+import cartopy.feature as cfeature
+import matplotlib.tri as tri
+
 from anemoi.inference.runners.simple import SimpleRunner
 from anemoi.inference.outputs.printer import print_state
 from anemoi.models.layers.processor import TransformerProcessor
-
 from ecmwf.opendata import Client as OpendataClient
 
 # Create dummy flash_attn package and submodule
@@ -32,6 +37,11 @@ sys.modules['flash_attn'] = flash_attn
 sys.modules['flash_attn.flash_attn_interface'] = flash_attn_interface
 
 # --- Definition of constants ---
+# SCRIPT CONSTANT
+RESULTS_FOLDER = "../reports/figures"
+EXPERIENCE = "inference_aifs_single-v1"
+
+# INPUT VARIABLE
 PARAM_SFC = ["10u", "10v", "2d", "2t", "msl", "skt", "sp", "tcw", "lsm", "z", "slor", "sdor"]
 # msl: Mean sea level pressure
 # skt: Skin temperature
@@ -73,8 +83,13 @@ def get_open_data(param, levelist=[]):
 
     return fields
 
+def fix(lons):
+    # Shift the longitudes from 0-360 to -180-180
+    return np.where(lons > 180, lons - 360, lons)
 
 if __name__ == "__main__":
+    # Create necessary dir
+    os.makedirs(RESULTS_FOLDER, exists_ok=True)
 
     ## Import initial conditions from ECMWF Open Data
     fields = {}
@@ -124,6 +139,24 @@ if __name__ == "__main__":
     # Run the forecast
     for state in runner.run(input_state=input_state, lead_time=12):
         print_state(state)
+
+    ## Plot generation
+    DISP_VAR = "100u"
+    latitudes = state["latitudes"]
+    longitudes = state["longitudes"]
+    values = state["fields"][DISP_VAR]
+
+    fig, ax = plt.subplots(figsize=(11, 6), subplot_kw={"projection": ccrs.PlateCarree()})
+    ax.coastlines()
+    ax.add_feature(cfeature.BORDERS, linestyle=":")
+
+    triangulation = tri.Triangulation(fix(longitudes), latitudes)
+
+    contour=ax.tricontourf(triangulation, values, levels=20, transform=ccrs.PlateCarree(), cmap="RdBu")
+    cbar = fig.colorbar(contour, ax=ax, orientation="vertical", shrink=0.7, label="100u")
+
+    plt.title("100m winds (100u) at {}".format(state["date"]))
+    plt.savefig(os.path.join(RESULTS_FOLDER, f"{EXPERIENCE}_{DISP_VAR}_{DATE}"), )
 
     print(" > Program finished successfully!")
 
