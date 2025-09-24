@@ -1,0 +1,6 @@
+warning: The `extra-build-dependencies` option is experimental and may change without warning. Pass `--preview-features extra-build-dependencies` to disable this warning.
+torch version: 2.8.0+cu128
+cuda available: True
+CUDA device count: 1
+ - device 0 NVIDIA H100 80GB HBM3
+Allocated small tensor on cuda:0, shape: torch.Size([10])

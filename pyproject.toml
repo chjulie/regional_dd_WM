@@ -23,6 +23,7 @@ dependencies = [
     # "flash-attn; sys_platform == 'linux' and platform_machine == 'x86_64'",
     "anemoi-registry>=0.1.8",
     "cartopy>=0.25.0",
+    "pip>=25.2",
 ]
 
 [tool.uv.extra-build-dependencies]

@@ -1,10 +1,10 @@
 #!/bin/sh -l
 
 #SBATCH --nodes=1
-#SBATCH --gpus=h100:1
+#SBATCH --gpus=h100:2
 #SBATCH --cpus-per-task=12
 #SBATCH --time=1:00:00
-#SBATCH --output=./slurm_test.txt
+#SBATCH --output=./slurm_test-2.txt
 
 source ../.venv/bin/activate
 uv run slurm_test.py

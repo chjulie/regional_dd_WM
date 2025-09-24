@@ -8,9 +8,30 @@ import earthkit.regrid as ekr
 
 from anemoi.inference.runners.simple import SimpleRunner
 from anemoi.inference.outputs.printer import print_state
+from anemoi.models.layers.processor import TransformerProcessor
 
 from ecmwf.opendata import Client as OpendataClient
 
+# Create dummy flash_attn package and submodule
+import sys
+import types
+
+# --- Create dummy flash_attn package ---
+flash_attn = types.ModuleType('flash_attn')
+flash_attn_interface = types.ModuleType('flash_attn_interface')
+
+# Dummy function to satisfy checkpoint
+def flash_attn_func(*args, **kwargs):
+    raise RuntimeError("This is a dummy flash_attn_func. Should not be called during inference with replaced processor.")
+
+flash_attn_interface.flash_attn_func = flash_attn_func
+
+# Register modules
+flash_attn.flash_attn_interface = flash_attn_interface
+sys.modules['flash_attn'] = flash_attn
+sys.modules['flash_attn.flash_attn_interface'] = flash_attn_interface
+
+# --- Definition of constants ---
 PARAM_SFC = ["10u", "10v", "2d", "2t", "msl", "skt", "sp", "tcw", "lsm", "z", "slor", "sdor"]
 # msl: Mean sea level pressure
 # skt: Skin temperature
@@ -82,7 +103,23 @@ if __name__ == "__main__":
     checkpoint = {"huggingface":"ecmwf/aifs-single-1.0"}
     print(' > CUDA availability: ', torch.cuda.is_available())
 
+    # Modify model to NOT use flash-attn
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    model = torch.load("../data/aifs-single-mse-1.0.ckpt", map_location=device, weights_only=False).to(device)
+    model.model.processor = TransformerProcessor(
+        num_layers=16,
+        window_size=1024,
+        num_channels=1024,
+        num_chunks=2,
+        activation='GELU',
+        num_heads=16,
+        mlp_hidden_ratio=4,
+        dropout_p=0.0,
+        attention_implementation="scaled_dot_product_attention").to(device)
+
+    print(" > Model modified to use 'scaled_dot_product_attention'.")
     runner = SimpleRunner(checkpoint, device="cuda")
+    runner.model = model
 
     # Run the forecast
     for state in runner.run(input_state=input_state, lead_time=12):
