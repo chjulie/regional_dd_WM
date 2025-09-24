@@ -89,7 +89,7 @@ def fix(lons):
 
 if __name__ == "__main__":
     # Create necessary dir
-    os.makedirs(RESULTS_FOLDER, exists_ok=True)
+    os.makedirs(RESULTS_FOLDER, exist_ok=True)
 
     ## Import initial conditions from ECMWF Open Data
     fields = {}
