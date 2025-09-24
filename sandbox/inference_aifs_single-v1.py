@@ -146,6 +146,21 @@ if __name__ == "__main__":
     longitudes = state["longitudes"]
     values = state["fields"][DISP_VAR]
 
+    fixed_longitudes = fix(longitudes)
+    print(' -- longitudes --')
+    print('- len: ', len(fixed_longitudes))
+    print('- [0]: ', fixed_longitudes[0])
+    print('- [-1]: ', fixed_longitudes[-1])
+    print('- res: ', fixed_longitudes[1] - fixed_longitudes[0])
+    print('\n')
+
+    print(' -- latitudes --')
+    print('- len: ', len(latitudes))
+    print('- [0]: ', latitudes[0])
+    print('- [-1]: ', latitudes[-1])
+    print('- res: ', latitudes[1] - latitudes[0])
+    print('\n')
+
     fig, ax = plt.subplots(figsize=(11, 6), subplot_kw={"projection": ccrs.PlateCarree()})
     ax.coastlines()
     ax.add_feature(cfeature.BORDERS, linestyle=":")
