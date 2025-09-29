@@ -1,0 +1,2229 @@
+,VAR_NAME,VAR_DESCR
+0,Times,"<class 'netCDF4.Variable'>
+|S1 Times(Time, DateStrLen)
+unlimited dimensions: Time
+current shape = (1, 19)
+filling off"
+1,XLAT,"<class 'netCDF4.Variable'>
+float32 XLAT(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: LATITUDE, SOUTH IS NEGATIVE
+    units: degree_north
+    stagger: 
+    coordinates: XLONG XLAT
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+2,XLONG,"<class 'netCDF4.Variable'>
+float32 XLONG(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: LONGITUDE, WEST IS NEGATIVE
+    units: degree_east
+    stagger: 
+    coordinates: XLONG XLAT
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+3,LU_INDEX,"<class 'netCDF4.Variable'>
+float32 LU_INDEX(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: LAND USE CATEGORY
+    units: 
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+4,ZNU,"<class 'netCDF4.Variable'>
+float32 ZNU(Time, bottom_top)
+    FieldType: 104
+    MemoryOrder: Z  
+    description: eta values on half (mass) levels
+    units: 
+    stagger: 
+unlimited dimensions: Time
+current shape = (1, 50)
+filling off"
+5,ZNW,"<class 'netCDF4.Variable'>
+float32 ZNW(Time, bottom_top_stag)
+    FieldType: 104
+    MemoryOrder: Z  
+    description: eta values on full (w) levels
+    units: 
+    stagger: Z
+unlimited dimensions: Time
+current shape = (1, 51)
+filling off"
+6,ZS,"<class 'netCDF4.Variable'>
+float32 ZS(Time, soil_layers_stag)
+    FieldType: 104
+    MemoryOrder: Z  
+    description: DEPTHS OF CENTERS OF SOIL LAYERS
+    units: m
+    stagger: Z
+unlimited dimensions: Time
+current shape = (1, 4)
+filling off"
+7,DZS,"<class 'netCDF4.Variable'>
+float32 DZS(Time, soil_layers_stag)
+    FieldType: 104
+    MemoryOrder: Z  
+    description: THICKNESSES OF SOIL LAYERS
+    units: m
+    stagger: Z
+unlimited dimensions: Time
+current shape = (1, 4)
+filling off"
+8,VAR_SSO,"<class 'netCDF4.Variable'>
+float32 VAR_SSO(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: variance of subgrid-scale orography
+    units: m2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+9,BATHYMETRY_FLAG,"<class 'netCDF4.Variable'>
+int32 BATHYMETRY_FLAG(Time)
+    FieldType: 106
+    MemoryOrder: 0  
+    description: Flag for bathymetry in the global attributes for metgrid data
+    units: -
+    stagger: 
+unlimited dimensions: Time
+current shape = (1,)
+filling off"
+10,U,"<class 'netCDF4.Variable'>
+float32 U(Time, bottom_top, south_north, west_east_stag)
+    FieldType: 104
+    MemoryOrder: XYZ
+    description: x-wind component
+    units: m s-1
+    stagger: X
+    coordinates: XLONG_U XLAT_U XTIME
+unlimited dimensions: Time
+current shape = (1, 50, 702, 559)
+filling off"
+11,V,"<class 'netCDF4.Variable'>
+float32 V(Time, bottom_top, south_north_stag, west_east)
+    FieldType: 104
+    MemoryOrder: XYZ
+    description: y-wind component
+    units: m s-1
+    stagger: Y
+    coordinates: XLONG_V XLAT_V XTIME
+unlimited dimensions: Time
+current shape = (1, 50, 703, 558)
+filling off"
+12,W,"<class 'netCDF4.Variable'>
+float32 W(Time, bottom_top_stag, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XYZ
+    description: z-wind component
+    units: m s-1
+    stagger: Z
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 51, 702, 558)
+filling off"
+13,PH,"<class 'netCDF4.Variable'>
+float32 PH(Time, bottom_top_stag, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XYZ
+    description: perturbation geopotential
+    units: m2 s-2
+    stagger: Z
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 51, 702, 558)
+filling off"
+14,PHB,"<class 'netCDF4.Variable'>
+float32 PHB(Time, bottom_top_stag, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XYZ
+    description: base-state geopotential
+    units: m2 s-2
+    stagger: Z
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 51, 702, 558)
+filling off"
+15,T,"<class 'netCDF4.Variable'>
+float32 T(Time, bottom_top, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XYZ
+    description: perturbation potential temperature theta-t0
+    units: K
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 50, 702, 558)
+filling off"
+16,THM,"<class 'netCDF4.Variable'>
+float32 THM(Time, bottom_top, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XYZ
+    description: either 1) pert moist pot temp=(1+Rv/Rd Qv)*(theta)-T0, or 2) pert dry pot temp=t
+    units: K
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 50, 702, 558)
+filling off"
+17,HFX_FORCE,"<class 'netCDF4.Variable'>
+float32 HFX_FORCE(Time)
+    FieldType: 104
+    MemoryOrder: 0  
+    description: SCM ideal surface sensible heat flux
+    units: W m-2
+    stagger: 
+unlimited dimensions: Time
+current shape = (1,)
+filling off"
+18,LH_FORCE,"<class 'netCDF4.Variable'>
+float32 LH_FORCE(Time)
+    FieldType: 104
+    MemoryOrder: 0  
+    description: SCM ideal surface latent heat flux
+    units: W m-2
+    stagger: 
+unlimited dimensions: Time
+current shape = (1,)
+filling off"
+19,TSK_FORCE,"<class 'netCDF4.Variable'>
+float32 TSK_FORCE(Time)
+    FieldType: 104
+    MemoryOrder: 0  
+    description: SCM ideal surface skin temperature
+    units: W m-2
+    stagger: 
+unlimited dimensions: Time
+current shape = (1,)
+filling off"
+20,HFX_FORCE_TEND,"<class 'netCDF4.Variable'>
+float32 HFX_FORCE_TEND(Time)
+    FieldType: 104
+    MemoryOrder: 0  
+    description: SCM ideal surface sensible heat flux tendency
+    units: W m-2 s-1
+    stagger: 
+unlimited dimensions: Time
+current shape = (1,)
+filling off"
+21,LH_FORCE_TEND,"<class 'netCDF4.Variable'>
+float32 LH_FORCE_TEND(Time)
+    FieldType: 104
+    MemoryOrder: 0  
+    description: SCM ideal surface latent heat flux tendency
+    units: W m-2 s-1
+    stagger: 
+unlimited dimensions: Time
+current shape = (1,)
+filling off"
+22,TSK_FORCE_TEND,"<class 'netCDF4.Variable'>
+float32 TSK_FORCE_TEND(Time)
+    FieldType: 104
+    MemoryOrder: 0  
+    description: SCM ideal surface skin temperature tendency
+    units: W m-2 s-1
+    stagger: 
+unlimited dimensions: Time
+current shape = (1,)
+filling off"
+23,MU,"<class 'netCDF4.Variable'>
+float32 MU(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: perturbation dry air mass in column
+    units: Pa
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+24,MUB,"<class 'netCDF4.Variable'>
+float32 MUB(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: base state dry air mass in column
+    units: Pa
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+25,NEST_POS,"<class 'netCDF4.Variable'>
+float32 NEST_POS(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: -
+    units: -
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+26,P,"<class 'netCDF4.Variable'>
+float32 P(Time, bottom_top, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XYZ
+    description: perturbation pressure
+    units: Pa
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 50, 702, 558)
+filling off"
+27,PB,"<class 'netCDF4.Variable'>
+float32 PB(Time, bottom_top, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XYZ
+    description: BASE STATE PRESSURE
+    units: Pa
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 50, 702, 558)
+filling off"
+28,FNM,"<class 'netCDF4.Variable'>
+float32 FNM(Time, bottom_top)
+    FieldType: 104
+    MemoryOrder: Z  
+    description: upper weight for vertical stretching
+    units: 
+    stagger: 
+unlimited dimensions: Time
+current shape = (1, 50)
+filling off"
+29,FNP,"<class 'netCDF4.Variable'>
+float32 FNP(Time, bottom_top)
+    FieldType: 104
+    MemoryOrder: Z  
+    description: lower weight for vertical stretching
+    units: 
+    stagger: 
+unlimited dimensions: Time
+current shape = (1, 50)
+filling off"
+30,RDNW,"<class 'netCDF4.Variable'>
+float32 RDNW(Time, bottom_top)
+    FieldType: 104
+    MemoryOrder: Z  
+    description: inverse d(eta) values between full (w) levels
+    units: 
+    stagger: 
+unlimited dimensions: Time
+current shape = (1, 50)
+filling off"
+31,RDN,"<class 'netCDF4.Variable'>
+float32 RDN(Time, bottom_top)
+    FieldType: 104
+    MemoryOrder: Z  
+    description: inverse d(eta) values between half (mass) levels
+    units: 
+    stagger: 
+unlimited dimensions: Time
+current shape = (1, 50)
+filling off"
+32,DNW,"<class 'netCDF4.Variable'>
+float32 DNW(Time, bottom_top)
+    FieldType: 104
+    MemoryOrder: Z  
+    description: d(eta) values between full (w) levels
+    units: 
+    stagger: 
+unlimited dimensions: Time
+current shape = (1, 50)
+filling off"
+33,DN,"<class 'netCDF4.Variable'>
+float32 DN(Time, bottom_top)
+    FieldType: 104
+    MemoryOrder: Z  
+    description: d(eta) values between half (mass) levels
+    units: 
+    stagger: 
+unlimited dimensions: Time
+current shape = (1, 50)
+filling off"
+34,CFN,"<class 'netCDF4.Variable'>
+float32 CFN(Time)
+    FieldType: 104
+    MemoryOrder: 0  
+    description: extrapolation constant
+    units: 
+    stagger: 
+unlimited dimensions: Time
+current shape = (1,)
+filling off"
+35,CFN1,"<class 'netCDF4.Variable'>
+float32 CFN1(Time)
+    FieldType: 104
+    MemoryOrder: 0  
+    description: extrapolation constant
+    units: 
+    stagger: 
+unlimited dimensions: Time
+current shape = (1,)
+filling off"
+36,THIS_IS_AN_IDEAL_RUN,"<class 'netCDF4.Variable'>
+int32 THIS_IS_AN_IDEAL_RUN(Time)
+    FieldType: 106
+    MemoryOrder: 0  
+    description: T/F flag: this is an ARW ideal simulation
+    units: -
+    stagger: 
+unlimited dimensions: Time
+current shape = (1,)
+filling off"
+37,P_HYD,"<class 'netCDF4.Variable'>
+float32 P_HYD(Time, bottom_top, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XYZ
+    description: hydrostatic pressure
+    units: Pa
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 50, 702, 558)
+filling off"
+38,Q2,"<class 'netCDF4.Variable'>
+float32 Q2(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: QV at 2 M
+    units: kg kg-1
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+39,T2,"<class 'netCDF4.Variable'>
+float32 T2(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: TEMP at 2 M
+    units: K
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+40,TH2,"<class 'netCDF4.Variable'>
+float32 TH2(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: POT TEMP at 2 M
+    units: K
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+41,PSFC,"<class 'netCDF4.Variable'>
+float32 PSFC(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: SFC PRESSURE
+    units: Pa
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+42,U10,"<class 'netCDF4.Variable'>
+float32 U10(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: U at 10 M
+    units: m s-1
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+43,V10,"<class 'netCDF4.Variable'>
+float32 V10(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: V at 10 M
+    units: m s-1
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+44,RDX,"<class 'netCDF4.Variable'>
+float32 RDX(Time)
+    FieldType: 104
+    MemoryOrder: 0  
+    description: INVERSE X GRID LENGTH
+    units: m-1
+    stagger: 
+unlimited dimensions: Time
+current shape = (1,)
+filling off"
+45,RDY,"<class 'netCDF4.Variable'>
+float32 RDY(Time)
+    FieldType: 104
+    MemoryOrder: 0  
+    description: INVERSE Y GRID LENGTH
+    units: m-1
+    stagger: 
+unlimited dimensions: Time
+current shape = (1,)
+filling off"
+46,AREA2D,"<class 'netCDF4.Variable'>
+float32 AREA2D(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: Horizontal grid cell area, using dx, dy, and map factors
+    units: m2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+47,DX2D,"<class 'netCDF4.Variable'>
+float32 DX2D(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: Horizontal grid distance: sqrt(area2d)
+    units: m
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+48,RESM,"<class 'netCDF4.Variable'>
+float32 RESM(Time)
+    FieldType: 104
+    MemoryOrder: 0  
+    description: TIME WEIGHT CONSTANT FOR SMALL STEPS
+    units: 
+    stagger: 
+unlimited dimensions: Time
+current shape = (1,)
+filling off"
+49,ZETATOP,"<class 'netCDF4.Variable'>
+float32 ZETATOP(Time)
+    FieldType: 104
+    MemoryOrder: 0  
+    description: ZETA AT MODEL TOP
+    units: 
+    stagger: 
+unlimited dimensions: Time
+current shape = (1,)
+filling off"
+50,CF1,"<class 'netCDF4.Variable'>
+float32 CF1(Time)
+    FieldType: 104
+    MemoryOrder: 0  
+    description: 2nd order extrapolation constant
+    units: 
+    stagger: 
+unlimited dimensions: Time
+current shape = (1,)
+filling off"
+51,CF2,"<class 'netCDF4.Variable'>
+float32 CF2(Time)
+    FieldType: 104
+    MemoryOrder: 0  
+    description: 2nd order extrapolation constant
+    units: 
+    stagger: 
+unlimited dimensions: Time
+current shape = (1,)
+filling off"
+52,CF3,"<class 'netCDF4.Variable'>
+float32 CF3(Time)
+    FieldType: 104
+    MemoryOrder: 0  
+    description: 2nd order extrapolation constant
+    units: 
+    stagger: 
+unlimited dimensions: Time
+current shape = (1,)
+filling off"
+53,ITIMESTEP,"<class 'netCDF4.Variable'>
+int32 ITIMESTEP(Time)
+    FieldType: 106
+    MemoryOrder: 0  
+    description: 
+    units: 
+    stagger: 
+unlimited dimensions: Time
+current shape = (1,)
+filling off"
+54,XTIME,"<class 'netCDF4.Variable'>
+float32 XTIME(Time)
+    FieldType: 104
+    MemoryOrder: 0  
+    description: minutes since 1990-09-01 00:00:00
+    units: minutes since 1990-09-01 00:00:00
+    stagger: 
+unlimited dimensions: Time
+current shape = (1,)
+filling off"
+55,QVAPOR,"<class 'netCDF4.Variable'>
+float32 QVAPOR(Time, bottom_top, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XYZ
+    description: Water vapor mixing ratio
+    units: kg kg-1
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 50, 702, 558)
+filling off"
+56,QCLOUD,"<class 'netCDF4.Variable'>
+float32 QCLOUD(Time, bottom_top, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XYZ
+    description: Cloud water mixing ratio
+    units: kg kg-1
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 50, 702, 558)
+filling off"
+57,QRAIN,"<class 'netCDF4.Variable'>
+float32 QRAIN(Time, bottom_top, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XYZ
+    description: Rain water mixing ratio
+    units: kg kg-1
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 50, 702, 558)
+filling off"
+58,QICE,"<class 'netCDF4.Variable'>
+float32 QICE(Time, bottom_top, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XYZ
+    description: Ice mixing ratio
+    units: kg kg-1
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 50, 702, 558)
+filling off"
+59,QSNOW,"<class 'netCDF4.Variable'>
+float32 QSNOW(Time, bottom_top, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XYZ
+    description: Snow mixing ratio
+    units: kg kg-1
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 50, 702, 558)
+filling off"
+60,QGRAUP,"<class 'netCDF4.Variable'>
+float32 QGRAUP(Time, bottom_top, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XYZ
+    description: Graupel mixing ratio
+    units: kg kg-1
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 50, 702, 558)
+filling off"
+61,SHDMAX,"<class 'netCDF4.Variable'>
+float32 SHDMAX(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: ANNUAL MAX VEG FRACTION
+    units: 
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+62,SHDMIN,"<class 'netCDF4.Variable'>
+float32 SHDMIN(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: ANNUAL MIN VEG FRACTION
+    units: 
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+63,SNOALB,"<class 'netCDF4.Variable'>
+float32 SNOALB(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: ANNUAL MAX SNOW ALBEDO IN FRACTION
+    units: 
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+64,TSLB,"<class 'netCDF4.Variable'>
+float32 TSLB(Time, soil_layers_stag, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XYZ
+    description: SOIL TEMPERATURE
+    units: K
+    stagger: Z
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 4, 702, 558)
+filling off"
+65,SMOIS,"<class 'netCDF4.Variable'>
+float32 SMOIS(Time, soil_layers_stag, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XYZ
+    description: SOIL MOISTURE
+    units: m3 m-3
+    stagger: Z
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 4, 702, 558)
+filling off"
+66,SH2O,"<class 'netCDF4.Variable'>
+float32 SH2O(Time, soil_layers_stag, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XYZ
+    description: SOIL LIQUID WATER
+    units: m3 m-3
+    stagger: Z
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 4, 702, 558)
+filling off"
+67,SMCREL,"<class 'netCDF4.Variable'>
+float32 SMCREL(Time, soil_layers_stag, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XYZ
+    description: RELATIVE SOIL MOISTURE
+    units: 
+    stagger: Z
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 4, 702, 558)
+filling off"
+68,SEAICE,"<class 'netCDF4.Variable'>
+float32 SEAICE(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: SEA ICE FLAG
+    units: 
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+69,XICEM,"<class 'netCDF4.Variable'>
+float32 XICEM(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: SEA ICE FLAG (PREVIOUS STEP)
+    units: 
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+70,SFROFF,"<class 'netCDF4.Variable'>
+float32 SFROFF(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: SURFACE RUNOFF
+    units: mm
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+71,UDROFF,"<class 'netCDF4.Variable'>
+float32 UDROFF(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: UNDERGROUND RUNOFF
+    units: mm
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+72,IVGTYP,"<class 'netCDF4.Variable'>
+int32 IVGTYP(Time, south_north, west_east)
+    FieldType: 106
+    MemoryOrder: XY 
+    description: DOMINANT VEGETATION CATEGORY
+    units: 
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+73,ISLTYP,"<class 'netCDF4.Variable'>
+int32 ISLTYP(Time, south_north, west_east)
+    FieldType: 106
+    MemoryOrder: XY 
+    description: DOMINANT SOIL CATEGORY
+    units: 
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+74,VEGFRA,"<class 'netCDF4.Variable'>
+float32 VEGFRA(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: VEGETATION FRACTION
+    units: 
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+75,ACGRDFLX,"<class 'netCDF4.Variable'>
+float32 ACGRDFLX(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: ACCUMULATED GROUND HEAT FLUX
+    units: J m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+76,ACSNOM,"<class 'netCDF4.Variable'>
+float32 ACSNOM(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: ACCUMULATED MELTED SNOW
+    units: kg m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+77,CANWAT,"<class 'netCDF4.Variable'>
+float32 CANWAT(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: CANOPY WATER
+    units: kg m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+78,SSTSK,"<class 'netCDF4.Variable'>
+float32 SSTSK(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: SKIN SEA SURFACE TEMPERATURE
+    units: K
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+79,WATER_DEPTH,"<class 'netCDF4.Variable'>
+float32 WATER_DEPTH(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: global water depth
+    units: m
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+80,COSZEN,"<class 'netCDF4.Variable'>
+float32 COSZEN(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: COS of SOLAR ZENITH ANGLE
+    units: dimensionless
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+81,LAI,"<class 'netCDF4.Variable'>
+float32 LAI(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: LEAF AREA INDEX
+    units: m-2/m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+82,VAR,"<class 'netCDF4.Variable'>
+float32 VAR(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: STANDARD DEVIATION OF SUBGRID-SCALE OROGRAPHY
+    units: m
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+83,VARLS,"<class 'netCDF4.Variable'>
+float32 VARLS(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: STANDARD DEVIATION of 2.5min-resolution topography
+    units: m
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+84,CONLS,"<class 'netCDF4.Variable'>
+float32 CONLS(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: OROGRAPHIC CONVEXITY of 2.5min-resolution topography
+    units: 
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+85,OA1LS,"<class 'netCDF4.Variable'>
+float32 OA1LS(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: OROGRAPHIC ASYMMETRY in West direction from 2.5min-resolution topography
+    units: 
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+86,OA2LS,"<class 'netCDF4.Variable'>
+float32 OA2LS(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: OROGRAPHIC ASYMMETRY in South direction from 2.5min-resolution topography
+    units: 
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+87,OA3LS,"<class 'netCDF4.Variable'>
+float32 OA3LS(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: OROGRAPHIC ASYMMETRY in South-West direction from 2.5min-resolution topography
+    units: 
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+88,OA4LS,"<class 'netCDF4.Variable'>
+float32 OA4LS(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: OROGRAPHIC ASYMMETRY in North-West direction from 2.5min-resolution topography
+    units: 
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+89,OL1LS,"<class 'netCDF4.Variable'>
+float32 OL1LS(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: OROGRAPHIC EFFECTIVE LENGTH for Westerly flow from 2.5min-resolution topography
+    units: 
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+90,OL2LS,"<class 'netCDF4.Variable'>
+float32 OL2LS(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: OROGRAPHIC EFFECTIVE LENGTH for Southerly flow from 2.5min-resolution topography
+    units: 
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+91,OL3LS,"<class 'netCDF4.Variable'>
+float32 OL3LS(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: OROGRAPHIC EFFECTIVE LENGTH for South-Westerly flow from 2.5min-resolution topog
+    units: 
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+92,OL4LS,"<class 'netCDF4.Variable'>
+float32 OL4LS(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: OROGRAPHIC EFFECTIVE LENGTH for North-Westerly flow from 2.5min-resolution topog
+    units: 
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+93,VARSS,"<class 'netCDF4.Variable'>
+float32 VARSS(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: STANDARD DEVIATION of 30sec-resolution topography
+    units: m
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+94,CONSS,"<class 'netCDF4.Variable'>
+float32 CONSS(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: OROGRAPHIC CONVEXITY of 30sec-resolution topography
+    units: 
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+95,OA1SS,"<class 'netCDF4.Variable'>
+float32 OA1SS(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: OROGRAPHIC ASYMMETRY in West direction from 30sec-resolution topography
+    units: 
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+96,OA2SS,"<class 'netCDF4.Variable'>
+float32 OA2SS(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: OROGRAPHIC ASYMMETRY in South direction from 30sec-resolution topography
+    units: 
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+97,OA3SS,"<class 'netCDF4.Variable'>
+float32 OA3SS(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: OROGRAPHIC ASYMMETRY in South-West direction from 30sec-resolution topography
+    units: 
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+98,OA4SS,"<class 'netCDF4.Variable'>
+float32 OA4SS(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: OROGRAPHIC ASYMMETRY in North-West direction from 30sec-resolution topography
+    units: 
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+99,OL1SS,"<class 'netCDF4.Variable'>
+float32 OL1SS(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: OROGRAPHIC EFFECTIVE LENGTH for Westerly flow from 30sec-resolution topography
+    units: 
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+100,OL2SS,"<class 'netCDF4.Variable'>
+float32 OL2SS(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: OROGRAPHIC EFFECTIVE LENGTH for Southerly flow from 30sec-resolution topography
+    units: 
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+101,OL3SS,"<class 'netCDF4.Variable'>
+float32 OL3SS(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: OROGRAPHIC EFFECTIVE LENGTH for South-Westerly flow from 30sec-resolution topogr
+    units: 
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+102,OL4SS,"<class 'netCDF4.Variable'>
+float32 OL4SS(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: OROGRAPHIC EFFECTIVE LENGTH for North-Westerly flow from 30sec-resolution topogr
+    units: 
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+103,MAPFAC_M,"<class 'netCDF4.Variable'>
+float32 MAPFAC_M(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: Map scale factor on mass grid
+    units: 
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+104,MAPFAC_U,"<class 'netCDF4.Variable'>
+float32 MAPFAC_U(Time, south_north, west_east_stag)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: Map scale factor on u-grid
+    units: 
+    stagger: X
+    coordinates: XLONG_U XLAT_U XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 559)
+filling off"
+105,MAPFAC_V,"<class 'netCDF4.Variable'>
+float32 MAPFAC_V(Time, south_north_stag, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: Map scale factor on v-grid
+    units: 
+    stagger: Y
+    coordinates: XLONG_V XLAT_V XTIME
+unlimited dimensions: Time
+current shape = (1, 703, 558)
+filling off"
+106,MAPFAC_MX,"<class 'netCDF4.Variable'>
+float32 MAPFAC_MX(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: Map scale factor on mass grid, x direction
+    units: 
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+107,MAPFAC_MY,"<class 'netCDF4.Variable'>
+float32 MAPFAC_MY(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: Map scale factor on mass grid, y direction
+    units: 
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+108,MAPFAC_UX,"<class 'netCDF4.Variable'>
+float32 MAPFAC_UX(Time, south_north, west_east_stag)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: Map scale factor on u-grid, x direction
+    units: 
+    stagger: X
+    coordinates: XLONG_U XLAT_U XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 559)
+filling off"
+109,MAPFAC_UY,"<class 'netCDF4.Variable'>
+float32 MAPFAC_UY(Time, south_north, west_east_stag)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: Map scale factor on u-grid, y direction
+    units: 
+    stagger: X
+    coordinates: XLONG_U XLAT_U XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 559)
+filling off"
+110,MAPFAC_VX,"<class 'netCDF4.Variable'>
+float32 MAPFAC_VX(Time, south_north_stag, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: Map scale factor on v-grid, x direction
+    units: 
+    stagger: Y
+    coordinates: XLONG_V XLAT_V XTIME
+unlimited dimensions: Time
+current shape = (1, 703, 558)
+filling off"
+111,MF_VX_INV,"<class 'netCDF4.Variable'>
+float32 MF_VX_INV(Time, south_north_stag, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: Inverse map scale factor on v-grid, x direction
+    units: 
+    stagger: Y
+    coordinates: XLONG_V XLAT_V XTIME
+unlimited dimensions: Time
+current shape = (1, 703, 558)
+filling off"
+112,MAPFAC_VY,"<class 'netCDF4.Variable'>
+float32 MAPFAC_VY(Time, south_north_stag, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: Map scale factor on v-grid, y direction
+    units: 
+    stagger: Y
+    coordinates: XLONG_V XLAT_V XTIME
+unlimited dimensions: Time
+current shape = (1, 703, 558)
+filling off"
+113,F,"<class 'netCDF4.Variable'>
+float32 F(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: Coriolis sine latitude term
+    units: s-1
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+114,E,"<class 'netCDF4.Variable'>
+float32 E(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: Coriolis cosine latitude term
+    units: s-1
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+115,SINALPHA,"<class 'netCDF4.Variable'>
+float32 SINALPHA(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: Local sine of map rotation
+    units: 
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+116,COSALPHA,"<class 'netCDF4.Variable'>
+float32 COSALPHA(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: Local cosine of map rotation
+    units: 
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+117,HGT,"<class 'netCDF4.Variable'>
+float32 HGT(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: Terrain Height
+    units: m
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+118,TSK,"<class 'netCDF4.Variable'>
+float32 TSK(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: SURFACE SKIN TEMPERATURE
+    units: K
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+119,P_TOP,"<class 'netCDF4.Variable'>
+float32 P_TOP(Time)
+    FieldType: 104
+    MemoryOrder: 0  
+    description: PRESSURE TOP OF THE MODEL
+    units: Pa
+    stagger: 
+unlimited dimensions: Time
+current shape = (1,)
+filling off"
+120,GOT_VAR_SSO,"<class 'netCDF4.Variable'>
+int32 GOT_VAR_SSO(Time)
+    FieldType: 106
+    MemoryOrder: 0  
+    description: whether VAR_SSO was included in WPS output (beginning V3.4)
+    units: 
+    stagger: 
+unlimited dimensions: Time
+current shape = (1,)
+filling off"
+121,T00,"<class 'netCDF4.Variable'>
+float32 T00(Time)
+    FieldType: 104
+    MemoryOrder: 0  
+    description: BASE STATE TEMPERATURE
+    units: K
+    stagger: 
+unlimited dimensions: Time
+current shape = (1,)
+filling off"
+122,P00,"<class 'netCDF4.Variable'>
+float32 P00(Time)
+    FieldType: 104
+    MemoryOrder: 0  
+    description: BASE STATE PRESSURE
+    units: Pa
+    stagger: 
+unlimited dimensions: Time
+current shape = (1,)
+filling off"
+123,TLP,"<class 'netCDF4.Variable'>
+float32 TLP(Time)
+    FieldType: 104
+    MemoryOrder: 0  
+    description: BASE STATE LAPSE RATE
+    units: 
+    stagger: 
+unlimited dimensions: Time
+current shape = (1,)
+filling off"
+124,TISO,"<class 'netCDF4.Variable'>
+float32 TISO(Time)
+    FieldType: 104
+    MemoryOrder: 0  
+    description: TEMP AT WHICH THE BASE T TURNS CONST
+    units: K
+    stagger: 
+unlimited dimensions: Time
+current shape = (1,)
+filling off"
+125,TLP_STRAT,"<class 'netCDF4.Variable'>
+float32 TLP_STRAT(Time)
+    FieldType: 104
+    MemoryOrder: 0  
+    description: BASE STATE LAPSE RATE (DT/D(LN(P)) IN STRATOSPHERE
+    units: K
+    stagger: 
+unlimited dimensions: Time
+current shape = (1,)
+filling off"
+126,P_STRAT,"<class 'netCDF4.Variable'>
+float32 P_STRAT(Time)
+    FieldType: 104
+    MemoryOrder: 0  
+    description: BASE STATE PRESSURE AT BOTTOM OF STRATOSPHERE
+    units: Pa
+    stagger: 
+unlimited dimensions: Time
+current shape = (1,)
+filling off"
+127,MAX_MSFTX,"<class 'netCDF4.Variable'>
+float32 MAX_MSFTX(Time)
+    FieldType: 104
+    MemoryOrder: 0  
+    description: Max map factor in domain
+    units: 
+    stagger: 
+unlimited dimensions: Time
+current shape = (1,)
+filling off"
+128,MAX_MSFTY,"<class 'netCDF4.Variable'>
+float32 MAX_MSFTY(Time)
+    FieldType: 104
+    MemoryOrder: 0  
+    description: Max map factor in domain
+    units: 
+    stagger: 
+unlimited dimensions: Time
+current shape = (1,)
+filling off"
+129,CLDFRA,"<class 'netCDF4.Variable'>
+float32 CLDFRA(Time, bottom_top, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XYZ
+    description: CLOUD FRACTION
+    units: 
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 50, 702, 558)
+filling off"
+130,GLW,"<class 'netCDF4.Variable'>
+float32 GLW(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: DOWNWARD LONG WAVE FLUX AT GROUND SURFACE
+    units: W m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+131,SWNORM,"<class 'netCDF4.Variable'>
+float32 SWNORM(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: NORMAL SHORT WAVE FLUX AT GROUND SURFACE (SLOPE-DEPENDENT)
+    units: W m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+132,ACSWUPT,"<class 'netCDF4.Variable'>
+float32 ACSWUPT(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: ACCUMULATED UPWELLING SHORTWAVE FLUX AT TOP
+    units: J m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+133,ACSWUPTC,"<class 'netCDF4.Variable'>
+float32 ACSWUPTC(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: ACCUMULATED UPWELLING CLEAR SKY SHORTWAVE FLUX AT TOP
+    units: J m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+134,ACSWDNT,"<class 'netCDF4.Variable'>
+float32 ACSWDNT(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: ACCUMULATED DOWNWELLING SHORTWAVE FLUX AT TOP
+    units: J m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+135,ACSWDNTC,"<class 'netCDF4.Variable'>
+float32 ACSWDNTC(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: ACCUMULATED DOWNWELLING CLEAR SKY SHORTWAVE FLUX AT TOP
+    units: J m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+136,ACSWUPB,"<class 'netCDF4.Variable'>
+float32 ACSWUPB(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: ACCUMULATED UPWELLING SHORTWAVE FLUX AT BOTTOM
+    units: J m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+137,ACSWUPBC,"<class 'netCDF4.Variable'>
+float32 ACSWUPBC(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: ACCUMULATED UPWELLING CLEAR SKY SHORTWAVE FLUX AT BOTTOM
+    units: J m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+138,ACSWDNB,"<class 'netCDF4.Variable'>
+float32 ACSWDNB(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: ACCUMULATED DOWNWELLING SHORTWAVE FLUX AT BOTTOM
+    units: J m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+139,ACSWDNBC,"<class 'netCDF4.Variable'>
+float32 ACSWDNBC(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: ACCUMULATED DOWNWELLING CLEAR SKY SHORTWAVE FLUX AT BOTTOM
+    units: J m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+140,ACLWUPT,"<class 'netCDF4.Variable'>
+float32 ACLWUPT(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: ACCUMULATED UPWELLING LONGWAVE FLUX AT TOP
+    units: J m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+141,ACLWUPTC,"<class 'netCDF4.Variable'>
+float32 ACLWUPTC(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: ACCUMULATED UPWELLING CLEAR SKY LONGWAVE FLUX AT TOP
+    units: J m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+142,ACLWDNT,"<class 'netCDF4.Variable'>
+float32 ACLWDNT(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: ACCUMULATED DOWNWELLING LONGWAVE FLUX AT TOP
+    units: J m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+143,ACLWDNTC,"<class 'netCDF4.Variable'>
+float32 ACLWDNTC(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: ACCUMULATED DOWNWELLING CLEAR SKY LONGWAVE FLUX AT TOP
+    units: J m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+144,ACLWUPB,"<class 'netCDF4.Variable'>
+float32 ACLWUPB(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: ACCUMULATED UPWELLING LONGWAVE FLUX AT BOTTOM
+    units: J m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+145,ACLWUPBC,"<class 'netCDF4.Variable'>
+float32 ACLWUPBC(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: ACCUMULATED UPWELLING CLEAR SKY LONGWAVE FLUX AT BOTTOM
+    units: J m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+146,ACLWDNB,"<class 'netCDF4.Variable'>
+float32 ACLWDNB(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: ACCUMULATED DOWNWELLING LONGWAVE FLUX AT BOTTOM
+    units: J m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+147,ACLWDNBC,"<class 'netCDF4.Variable'>
+float32 ACLWDNBC(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: ACCUMULATED DOWNWELLING CLEAR SKY LONGWAVE FLUX AT BOTTOM
+    units: J m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+148,I_ACSWUPT,"<class 'netCDF4.Variable'>
+int32 I_ACSWUPT(Time, south_north, west_east)
+    FieldType: 106
+    MemoryOrder: XY 
+    description: BUCKET FOR UPWELLING SHORTWAVE FLUX AT TOP
+    units: J m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+149,I_ACSWUPTC,"<class 'netCDF4.Variable'>
+int32 I_ACSWUPTC(Time, south_north, west_east)
+    FieldType: 106
+    MemoryOrder: XY 
+    description: BUCKET FOR UPWELLING CLEAR SKY SHORTWAVE FLUX AT TOP
+    units: J m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+150,I_ACSWDNT,"<class 'netCDF4.Variable'>
+int32 I_ACSWDNT(Time, south_north, west_east)
+    FieldType: 106
+    MemoryOrder: XY 
+    description: BUCKET FOR DOWNWELLING SHORTWAVE FLUX AT TOP
+    units: J m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+151,I_ACSWDNTC,"<class 'netCDF4.Variable'>
+int32 I_ACSWDNTC(Time, south_north, west_east)
+    FieldType: 106
+    MemoryOrder: XY 
+    description: BUCKET FOR DOWNWELLING CLEAR SKY SHORTWAVE FLUX AT TOP
+    units: J m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+152,I_ACSWUPB,"<class 'netCDF4.Variable'>
+int32 I_ACSWUPB(Time, south_north, west_east)
+    FieldType: 106
+    MemoryOrder: XY 
+    description: BUCKET FOR UPWELLING SHORTWAVE FLUX AT BOTTOM
+    units: J m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+153,I_ACSWUPBC,"<class 'netCDF4.Variable'>
+int32 I_ACSWUPBC(Time, south_north, west_east)
+    FieldType: 106
+    MemoryOrder: XY 
+    description: BUCKET FOR UPWELLING CLEAR SKY SHORTWAVE FLUX AT BOTTOM
+    units: J m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+154,I_ACSWDNB,"<class 'netCDF4.Variable'>
+int32 I_ACSWDNB(Time, south_north, west_east)
+    FieldType: 106
+    MemoryOrder: XY 
+    description: BUCKET FOR DOWNWELLING SHORTWAVE FLUX AT BOTTOM
+    units: J m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+155,I_ACSWDNBC,"<class 'netCDF4.Variable'>
+int32 I_ACSWDNBC(Time, south_north, west_east)
+    FieldType: 106
+    MemoryOrder: XY 
+    description: BUCKET FOR DOWNWELLING CLEAR SKY SHORTWAVE FLUX AT BOTTOM
+    units: J m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+156,I_ACLWUPT,"<class 'netCDF4.Variable'>
+int32 I_ACLWUPT(Time, south_north, west_east)
+    FieldType: 106
+    MemoryOrder: XY 
+    description: BUCKET FOR UPWELLING LONGWAVE FLUX AT TOP
+    units: J m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+157,I_ACLWUPTC,"<class 'netCDF4.Variable'>
+int32 I_ACLWUPTC(Time, south_north, west_east)
+    FieldType: 106
+    MemoryOrder: XY 
+    description: BUCKET FOR UPWELLING CLEAR SKY LONGWAVE FLUX AT TOP
+    units: J m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+158,I_ACLWDNT,"<class 'netCDF4.Variable'>
+int32 I_ACLWDNT(Time, south_north, west_east)
+    FieldType: 106
+    MemoryOrder: XY 
+    description: BUCKET FOR DOWNWELLING LONGWAVE FLUX AT TOP
+    units: J m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+159,I_ACLWDNTC,"<class 'netCDF4.Variable'>
+int32 I_ACLWDNTC(Time, south_north, west_east)
+    FieldType: 106
+    MemoryOrder: XY 
+    description: BUCKET FOR DOWNWELLING CLEAR SKY LONGWAVE FLUX AT TOP
+    units: J m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+160,I_ACLWUPB,"<class 'netCDF4.Variable'>
+int32 I_ACLWUPB(Time, south_north, west_east)
+    FieldType: 106
+    MemoryOrder: XY 
+    description: BUCKET FOR UPWELLING LONGWAVE FLUX AT BOTTOM
+    units: J m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+161,I_ACLWUPBC,"<class 'netCDF4.Variable'>
+int32 I_ACLWUPBC(Time, south_north, west_east)
+    FieldType: 106
+    MemoryOrder: XY 
+    description: BUCKET FOR UPWELLING CLEAR SKY LONGWAVE FLUX AT BOTTOM
+    units: J m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+162,I_ACLWDNB,"<class 'netCDF4.Variable'>
+int32 I_ACLWDNB(Time, south_north, west_east)
+    FieldType: 106
+    MemoryOrder: XY 
+    description: BUCKET FOR DOWNWELLING LONGWAVE FLUX AT BOTTOM
+    units: J m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+163,I_ACLWDNBC,"<class 'netCDF4.Variable'>
+int32 I_ACLWDNBC(Time, south_north, west_east)
+    FieldType: 106
+    MemoryOrder: XY 
+    description: BUCKET FOR DOWNWELLING CLEAR SKY LONGWAVE FLUX AT BOTTOM
+    units: J m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+164,SWUPT,"<class 'netCDF4.Variable'>
+float32 SWUPT(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: INSTANTANEOUS UPWELLING SHORTWAVE FLUX AT TOP
+    units: W m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+165,SWUPTC,"<class 'netCDF4.Variable'>
+float32 SWUPTC(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: INSTANTANEOUS UPWELLING CLEAR SKY SHORTWAVE FLUX AT TOP
+    units: W m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+166,SWUPB,"<class 'netCDF4.Variable'>
+float32 SWUPB(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: INSTANTANEOUS UPWELLING SHORTWAVE FLUX AT BOTTOM
+    units: W m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+167,SWUPBC,"<class 'netCDF4.Variable'>
+float32 SWUPBC(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: INSTANTANEOUS UPWELLING CLEAR SKY SHORTWAVE FLUX AT BOTTOM
+    units: W m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+168,LWUPT,"<class 'netCDF4.Variable'>
+float32 LWUPT(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: INSTANTANEOUS UPWELLING LONGWAVE FLUX AT TOP
+    units: W m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+169,LWUPTC,"<class 'netCDF4.Variable'>
+float32 LWUPTC(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: INSTANTANEOUS UPWELLING CLEAR SKY LONGWAVE FLUX AT TOP
+    units: W m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+170,LWUPB,"<class 'netCDF4.Variable'>
+float32 LWUPB(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: INSTANTANEOUS UPWELLING LONGWAVE FLUX AT BOTTOM
+    units: W m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+171,LWUPBC,"<class 'netCDF4.Variable'>
+float32 LWUPBC(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: INSTANTANEOUS UPWELLING CLEAR SKY LONGWAVE FLUX AT BOTTOM
+    units: W m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+172,OLR,"<class 'netCDF4.Variable'>
+float32 OLR(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: TOA OUTGOING LONG WAVE
+    units: W m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+173,XLAT_U,"<class 'netCDF4.Variable'>
+float32 XLAT_U(Time, south_north, west_east_stag)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: LATITUDE, SOUTH IS NEGATIVE
+    units: degree_north
+    stagger: X
+    coordinates: XLONG_U XLAT_U
+unlimited dimensions: Time
+current shape = (1, 702, 559)
+filling off"
+174,XLONG_U,"<class 'netCDF4.Variable'>
+float32 XLONG_U(Time, south_north, west_east_stag)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: LONGITUDE, WEST IS NEGATIVE
+    units: degree_east
+    stagger: X
+    coordinates: XLONG_U XLAT_U
+unlimited dimensions: Time
+current shape = (1, 702, 559)
+filling off"
+175,XLAT_V,"<class 'netCDF4.Variable'>
+float32 XLAT_V(Time, south_north_stag, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: LATITUDE, SOUTH IS NEGATIVE
+    units: degree_north
+    stagger: Y
+    coordinates: XLONG_V XLAT_V
+unlimited dimensions: Time
+current shape = (1, 703, 558)
+filling off"
+176,XLONG_V,"<class 'netCDF4.Variable'>
+float32 XLONG_V(Time, south_north_stag, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: LONGITUDE, WEST IS NEGATIVE
+    units: degree_east
+    stagger: Y
+    coordinates: XLONG_V XLAT_V
+unlimited dimensions: Time
+current shape = (1, 703, 558)
+filling off"
+177,ALBEDO,"<class 'netCDF4.Variable'>
+float32 ALBEDO(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: ALBEDO
+    units: -
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+178,CLAT,"<class 'netCDF4.Variable'>
+float32 CLAT(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: COMPUTATIONAL GRID LATITUDE, SOUTH IS NEGATIVE
+    units: degree_north
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+179,ALBBCK,"<class 'netCDF4.Variable'>
+float32 ALBBCK(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: BACKGROUND ALBEDO
+    units: 
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+180,EMISS,"<class 'netCDF4.Variable'>
+float32 EMISS(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: SURFACE EMISSIVITY
+    units: 
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+181,NOAHRES,"<class 'netCDF4.Variable'>
+float32 NOAHRES(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: RESIDUAL OF THE NOAH SURFACE ENERGY BUDGET
+    units: W m{-2}
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+182,TMN,"<class 'netCDF4.Variable'>
+float32 TMN(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: SOIL TEMPERATURE AT LOWER BOUNDARY
+    units: K
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+183,XLAND,"<class 'netCDF4.Variable'>
+float32 XLAND(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: LAND MASK (1 FOR LAND, 2 FOR WATER)
+    units: 
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+184,ACHFX,"<class 'netCDF4.Variable'>
+float32 ACHFX(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: ACCUMULATED UPWARD HEAT FLUX AT THE SURFACE
+    units: J m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+185,ACLHF,"<class 'netCDF4.Variable'>
+float32 ACLHF(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: ACCUMULATED UPWARD LATENT HEAT FLUX AT THE SURFACE
+    units: J m-2
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+186,SR,"<class 'netCDF4.Variable'>
+float32 SR(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: fraction of frozen precipitation
+    units: -
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+187,SAVE_TOPO_FROM_REAL,"<class 'netCDF4.Variable'>
+int32 SAVE_TOPO_FROM_REAL(Time)
+    FieldType: 106
+    MemoryOrder: 0  
+    description: 1=original topo from real/0=topo modified by WRF
+    units: flag
+    stagger: 
+unlimited dimensions: Time
+current shape = (1,)
+filling off"
+188,ISEEDARR_SPPT,"<class 'netCDF4.Variable'>
+int32 ISEEDARR_SPPT(Time, seed_dim_stag)
+    FieldType: 106
+    MemoryOrder: Z  
+    description: Array to hold seed for restart, SPPT
+    units: 
+    stagger: Z
+unlimited dimensions: Time
+current shape = (1, 2)
+filling off"
+189,ISEEDARR_SKEBS,"<class 'netCDF4.Variable'>
+int32 ISEEDARR_SKEBS(Time, seed_dim_stag)
+    FieldType: 106
+    MemoryOrder: Z  
+    description: Array to hold seed for restart, SKEBS
+    units: 
+    stagger: Z
+unlimited dimensions: Time
+current shape = (1, 2)
+filling off"
+190,ISEEDARR_RAND_PERTURB,"<class 'netCDF4.Variable'>
+int32 ISEEDARR_RAND_PERTURB(Time, seed_dim_stag)
+    FieldType: 106
+    MemoryOrder: Z  
+    description: Array to hold seed for restart, RAND_PERT
+    units: 
+    stagger: Z
+unlimited dimensions: Time
+current shape = (1, 2)
+filling off"
+191,ISEEDARRAY_SPP_CONV,"<class 'netCDF4.Variable'>
+int32 ISEEDARRAY_SPP_CONV(Time, seed_dim_stag)
+    FieldType: 106
+    MemoryOrder: Z  
+    description: Array to hold seed for restart, RAND_PERT2
+    units: 
+    stagger: Z
+unlimited dimensions: Time
+current shape = (1, 2)
+filling off"
+192,ISEEDARRAY_SPP_PBL,"<class 'netCDF4.Variable'>
+int32 ISEEDARRAY_SPP_PBL(Time, seed_dim_stag)
+    FieldType: 106
+    MemoryOrder: Z  
+    description: Array to hold seed for restart, RAND_PERT3
+    units: 
+    stagger: Z
+unlimited dimensions: Time
+current shape = (1, 2)
+filling off"
+193,ISEEDARRAY_SPP_LSM,"<class 'netCDF4.Variable'>
+int32 ISEEDARRAY_SPP_LSM(Time, seed_dim_stag)
+    FieldType: 106
+    MemoryOrder: Z  
+    description: Array to hold seed for restart, RAND_PERT4
+    units: 
+    stagger: Z
+unlimited dimensions: Time
+current shape = (1, 2)
+filling off"
+194,C1H,"<class 'netCDF4.Variable'>
+float32 C1H(Time, bottom_top)
+    FieldType: 104
+    MemoryOrder: Z  
+    description: half levels, c1h = d bf / d eta, using znw
+    units: Dimensionless
+    stagger: 
+unlimited dimensions: Time
+current shape = (1, 50)
+filling off"
+195,C2H,"<class 'netCDF4.Variable'>
+float32 C2H(Time, bottom_top)
+    FieldType: 104
+    MemoryOrder: Z  
+    description: half levels, c2h = (1-c1h)*(p0-pt)
+    units: Pa
+    stagger: 
+unlimited dimensions: Time
+current shape = (1, 50)
+filling off"
+196,C1F,"<class 'netCDF4.Variable'>
+float32 C1F(Time, bottom_top_stag)
+    FieldType: 104
+    MemoryOrder: Z  
+    description: full levels, c1f = d bf / d eta, using znu
+    units: Dimensionless
+    stagger: Z
+unlimited dimensions: Time
+current shape = (1, 51)
+filling off"
+197,C2F,"<class 'netCDF4.Variable'>
+float32 C2F(Time, bottom_top_stag)
+    FieldType: 104
+    MemoryOrder: Z  
+    description: full levels, c2f = (1-c1f)*(p0-pt)
+    units: Pa
+    stagger: Z
+unlimited dimensions: Time
+current shape = (1, 51)
+filling off"
+198,C3H,"<class 'netCDF4.Variable'>
+float32 C3H(Time, bottom_top)
+    FieldType: 104
+    MemoryOrder: Z  
+    description: half levels, c3h = bh
+    units: Dimensionless
+    stagger: 
+unlimited dimensions: Time
+current shape = (1, 50)
+filling off"
+199,C4H,"<class 'netCDF4.Variable'>
+float32 C4H(Time, bottom_top)
+    FieldType: 104
+    MemoryOrder: Z  
+    description: half levels, c4h = (eta-bh)*(p0-pt), using znu
+    units: Pa
+    stagger: 
+unlimited dimensions: Time
+current shape = (1, 50)
+filling off"
+200,C3F,"<class 'netCDF4.Variable'>
+float32 C3F(Time, bottom_top_stag)
+    FieldType: 104
+    MemoryOrder: Z  
+    description: full levels, c3f = bf
+    units: Dimensionless
+    stagger: Z
+unlimited dimensions: Time
+current shape = (1, 51)
+filling off"
+201,C4F,"<class 'netCDF4.Variable'>
+float32 C4F(Time, bottom_top_stag)
+    FieldType: 104
+    MemoryOrder: Z  
+    description: full levels, c4f = (eta-bf)*(p0-pt), using znw
+    units: Pa
+    stagger: Z
+unlimited dimensions: Time
+current shape = (1, 51)
+filling off"
+202,PCB,"<class 'netCDF4.Variable'>
+float32 PCB(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: base state dry air mass in column
+    units: Pa
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+203,PC,"<class 'netCDF4.Variable'>
+float32 PC(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: perturbation dry air mass in column
+    units: Pa
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+204,LANDMASK,"<class 'netCDF4.Variable'>
+float32 LANDMASK(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: LAND MASK (1 FOR LAND, 0 FOR WATER)
+    units: 
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+205,LAKEMASK,"<class 'netCDF4.Variable'>
+float32 LAKEMASK(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: LAKE MASK (1 FOR LAKE, 0 FOR NON-LAKE)
+    units: 
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+206,SST,"<class 'netCDF4.Variable'>
+float32 SST(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: SEA SURFACE TEMPERATURE
+    units: K
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
+207,SST_INPUT,"<class 'netCDF4.Variable'>
+float32 SST_INPUT(Time, south_north, west_east)
+    FieldType: 104
+    MemoryOrder: XY 
+    description: SEA SURFACE TEMPERATURE FROM WRFLOWINPUT FILE
+    units: K
+    stagger: 
+    coordinates: XLONG XLAT XTIME
+unlimited dimensions: Time
+current shape = (1, 702, 558)
+filling off"
